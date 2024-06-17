@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.custom-toast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  @apply lg:h-[auto] bg-stone-800 text-green-500 lg:text-xl text-sm w-[50vw] lg:w-[auto] h-[5vh];
+}
+
+.custom-toast-fail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  @apply lg:h-[auto] bg-stone-800 text-red-500 lg:text-xl text-sm w-[50vw] lg:w-[auto] h-[5vh];
+}
+
+.custom-toast-fail .Toastify__progress-bar{
+  background: red;
+}
+
+.custom-toast .Toastify__progress-bar {
+  background: #4caf50;
+}
