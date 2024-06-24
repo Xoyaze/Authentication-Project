@@ -40,7 +40,6 @@ const SignInPage = () => {
       const tokenData = tokenResponse.data;
       localStorage.setItem('accessToken', tokenData.access);
       localStorage.setItem('refreshToken', tokenData.refresh);
-      console.log("Access:" + tokenData.access + "Refresh: " + tokenData.refresh);
       toast("Login successfull.", {className: 'custom-toast'});  
       setLoggedIn(true);
       navigate('/')

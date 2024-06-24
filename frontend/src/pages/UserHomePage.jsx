@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 import UserSideBar from '../components/UserSideBar'
-import UserTeachers from '../components/UserTeachers'
+import { Outlet } from 'react-router-dom';
 
 
 export const SideBarContext = createContext();
@@ -13,7 +13,7 @@ const UserHomePage = () => {
     <SideBarContext.Provider value={{toggleSidebar, setToggleSideBar}}>
       <div className='bg-gray-900 h-[95vh] w-full flex justify-between'>
         <UserSideBar />
-        <UserTeachers />
+        <Outlet />
       </div>
     </SideBarContext.Provider>
   )

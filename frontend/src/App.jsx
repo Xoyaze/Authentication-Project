@@ -7,6 +7,12 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import AuthProvider from "./pages/AuthProvider";
 import LoggedInRoute from "./components/LoggedInRoute";
+import UserTeachers from "./components/UserTeachers";
+import CommentsPage from "./components/CommentsPage";
+import UserCommentsPage from "./components/UserCommentsPage";
+import WriteCommentsPage from "./components/WriteCommentsPage";
+import ViewTeachersComponent from "./components/ViewTeachersComponent";
+import CreateTeachersComponent from "./components/CreateTeachersComponent";
 
 
 const router = createBrowserRouter([
@@ -18,6 +24,23 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <LoggedInRoute />,
+        children: [{
+          path: 'teachers',
+          element: <UserTeachers />,
+        },
+        {
+          path: "",
+          element: <CommentsPage />
+        },
+        {
+          path: "usercomments",
+          element: <UserCommentsPage />
+        },
+        {
+          path: "writecomments",
+          element: <WriteCommentsPage />
+        }
+      ]
       },
       {
         path: 'signIn',
