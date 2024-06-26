@@ -13,7 +13,7 @@ const UserTeachers = () => {
 
   return (
     <div className={`text-white h-auto overflow-y-scroll w-full ${toggleSidebar ? 'pt-16' : 'pt-3'} px-4 lg:pt-4 transition-all duration-150 pb-20`}>
-        <h1 className={`${toggleSidebar ? 'ml-0' : 'ml-8'} text-2xl lg:text-4xl text-yellow-300`}>Create Or View Existing Teachers</h1>
+        <h1 className={`${toggleSidebar ? 'ml-0' : 'ml-8'} text-2xl lg:text-4xl text-yellow-300 mb-12`}>Create Or View Existing Teachers</h1>
         <div className='h-[5vh] w-full  mt-4 flex justify-around items-center text-xl'>
           <button onClick={() => setTeacherViewToggle(true)} className={ teacherViewToggle ? `border-orange-500 text-orange-500 ${teacherLinkClasses}` : `${teacherLinkClasses}`}>
             <h1>View Teachers</h1>

@@ -11,8 +11,8 @@ import UserTeachers from "./components/UserTeachers";
 import CommentsPage from "./components/CommentsPage";
 import UserCommentsPage from "./components/UserCommentsPage";
 import WriteCommentsPage from "./components/WriteCommentsPage";
-import ViewTeachersComponent from "./components/ViewTeachersComponent";
-import CreateTeachersComponent from "./components/CreateTeachersComponent";
+import TeacherDetailsPage from "./pages/TeacherDetailsPage";
+import CommentDetailPage from "./pages/CommentDetailPage";
 
 
 const router = createBrowserRouter([
@@ -29,8 +29,16 @@ const router = createBrowserRouter([
           element: <UserTeachers />,
         },
         {
+          path: 'details/:teacherId',
+          element: <TeacherDetailsPage /> 
+        },
+        {
           path: "",
           element: <CommentsPage />
+        },
+        {
+          path: '/:commentId',
+          element: <CommentDetailPage /> 
         },
         {
           path: "usercomments",
@@ -38,7 +46,13 @@ const router = createBrowserRouter([
         },
         {
           path: "writecomments",
-          element: <WriteCommentsPage />
+          element: <WriteCommentsPage />,
+          children: [
+            {
+              path: '/writecomments/:teacherId',
+              element: <WriteCommentsPage />
+            }
+          ]
         }
       ]
       },

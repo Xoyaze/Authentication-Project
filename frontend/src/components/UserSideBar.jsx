@@ -81,10 +81,10 @@ const UserSideBar = () => {
                 </NavLink>
             </div>
             <div className='h-1/3 w-full flex flex-col justify-end'>
-                <div className='h-[20%] text-sm lg:h-[30%] w-full rounded hover:bg-gray-800 transition-hover duration-100 text-gray-400 hover:text-white flex justify-center items-center gap-2 cursor-pointer'>
+                {/* <div className='h-[20%] text-sm lg:h-[30%] w-full rounded hover:bg-gray-800 transition-hover duration-100 text-gray-400 hover:text-white flex justify-center items-center gap-2 cursor-pointer'>
                     <FontAwesomeIcon icon={faTrash} />
                     <h1 className=''>Delete Account</h1>
-                </div>
+                </div> */}
                 <button onClick={logOut} className='h-[20%] text-sm lg:h-[30%] w-full rounded hover:bg-gray-800 transition-hover duration-100 text-gray-400 hover:text-white flex justify-center items-center gap-2 cursor-pointer '>
                     <FontAwesomeIcon icon={faRightFromBracket} />
                     <h1 className=''>Log Out</h1>
