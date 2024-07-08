@@ -51,7 +51,7 @@ const CommentDetailPage = () => {
                     <div className='h-[80vh] w-full px-4 flex flex-col gap-6'>
                         <div className='h-auto w-full flex gap-6 items-end'>
                             <h1 className='text-3xl text-green-500'>{details.user?.username || 'Unknown User'}</h1>
-                            <h3 className='text-sm text-gray-500'>{differenceInDays == 0 ? (differenceInHours + ' hours ago') : (differenceInDays + ' days ' + differenceInHours + " hours ago")}</h3>
+                            <h3 className='text-sm text-gray-500'>{differenceInDays > 0 ? (differenceInDays + ' days ' + differenceInHours + " hours ago") : (differenceInHours + ' hours ago')}</h3>
                         </div>
                         <p className='text-gray-300'>{details.text || 'No comment text available'}</p>
                         <h1>Commented On: <span className='text-yellow-500'>{details.teacher?.name || 'Unknown Teacher'}</span></h1>
